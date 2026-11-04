@@ -17,12 +17,12 @@ namespace CenoteVivo.EditorTools
     // puntos de vista de cámara e interfaz completa. Ejecutable desde el menú o en batchmode.
     public static class CenoteVivoSetup
     {
-        const string Root = "Assets/CenoteVivo";
+        const string Root = "Assets";
         const string SourceScene = "Assets/Scenes/CENOTE.unity";
-        public const string ScenePath = Root + "/Scenes/CenoteVivo.unity";
-        const string MatDir = Root + "/Materials";
-        const string PrefabDir = Root + "/Prefabs";
-        const string TexDir = Root + "/Textures";
+        public const string ScenePath = "Assets/Scenes/CenoteVivo.unity";
+        const string MatDir = "Assets/Materials/CenoteVivo";
+        const string PrefabDir = "Assets/Prefabs";
+        const string TexDir = "Assets/Textures/Normales";
 
         // LOD Group: 100–32.5 % LOD0, 32.5–12.5 % LOD1, 12.5–1 % LOD2, < 1 % culled.
         static readonly float[] LodTransitions = { 0.325f, 0.125f, 0.01f };
@@ -34,10 +34,10 @@ namespace CenoteVivo.EditorTools
         [MenuItem("Cenote Vivo/Construir escena")]
         public static void Run()
         {
-            foreach (var d in new[] { Root + "/Scenes", MatDir, PrefabDir, TexDir })
+            foreach (var d in new[] { "Assets/Scenes", MatDir, PrefabDir, TexDir, "Assets/Models/Generados" })
                 Directory.CreateDirectory(d);
             AssetDatabase.Refresh();
-            foreach (var guid in AssetDatabase.FindAssets("Filtracion_ t:Mesh", new[] { PrefabDir }))
+            foreach (var guid in AssetDatabase.FindAssets("Filtracion_ t:Mesh", new[] { "Assets/Models/Generados" }))
                 AssetDatabase.DeleteAsset(AssetDatabase.GUIDToAssetPath(guid));
 
             ConfigureRenderPipeline();
@@ -483,7 +483,7 @@ namespace CenoteVivo.EditorTools
             mesh.triangles = new[] { 0, 2, 1, 2, 3, 1 };
             mesh.RecalculateNormals();
             mesh.RecalculateBounds();
-            string path = $"{PrefabDir}/Filtracion_{Mathf.Abs(top.point.GetHashCode()):X}.asset";
+            string path = $"Assets/Models/Generados/Filtracion_{Mathf.Abs(top.point.GetHashCode()):X}.asset";
             AssetDatabase.CreateAsset(mesh, path);
             return mesh;
         }

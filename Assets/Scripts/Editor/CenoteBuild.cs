@@ -72,7 +72,7 @@ namespace CenoteVivo.EditorTools
         {
             Build(CenoteVivoSetup.ScenePath, "Builds/Metrics/Optimizado/CenoteVivo.exe");
 
-            const string baselineScene = "Assets/CenoteVivo/Scenes/CenoteVivo_SinOptimizar.unity";
+            const string baselineScene = "Assets/Scenes/CenoteVivo_SinOptimizar.unity";
             AssetDatabase.DeleteAsset(baselineScene);
             AssetDatabase.CopyAsset(CenoteVivoSetup.ScenePath, baselineScene);
             var scene = EditorSceneManager.OpenScene(baselineScene);

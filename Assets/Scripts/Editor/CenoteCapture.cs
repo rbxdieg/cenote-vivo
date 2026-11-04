@@ -259,7 +259,7 @@ namespace CenoteVivo.EditorTools
             report.AppendLine($"\n[LOD] objeto {group.name} size={group.size:F2} escala={group.transform.lossyScale.x:F2}");
             // En Play Mode el static batching sustituye las mallas por "Combined Mesh": se leen las del prefab.
             var prefabName = group.name.Substring(0, group.name.LastIndexOf('_'));
-            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>($"Assets/CenoteVivo/Prefabs/{prefabName}.prefab");
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>($"Assets/Prefabs/{prefabName}.prefab");
             var prefabLods = prefab.GetComponent<LODGroup>().GetLODs();
             for (int i = 0; i < prefabLods.Length; i++)
             {
