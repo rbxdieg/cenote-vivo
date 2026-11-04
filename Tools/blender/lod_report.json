@@ -1,0 +1,36 @@
+{
+  "roca": {
+    "LOD0": {
+      "ratio": 1.0,
+      "tris": 9826,
+      "verts": 4915
+    },
+    "LOD1": {
+      "ratio": 0.45,
+      "tris": 4420,
+      "verts": 2212
+    },
+    "LOD2": {
+      "ratio": 0.25,
+      "tris": 2456,
+      "verts": 1230
+    }
+  },
+  "roca2": {
+    "LOD0": {
+      "ratio": 1.0,
+      "tris": 9826,
+      "verts": 4915
+    },
+    "LOD1": {
+      "ratio": 0.45,
+      "tris": 4420,
+      "verts": 2212
+    },
+    "LOD2": {
+      "ratio": 0.25,
+      "tris": 2456,
+      "verts": 1230
+    }
+  }
+}

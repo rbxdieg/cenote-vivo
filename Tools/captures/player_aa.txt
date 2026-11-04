@@ -1,0 +1,7 @@
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU | API: Direct3D12 | Resolucion: 1600x900
+Tecnica | FPS | Frame ms | GPU ms | Gfx usada MB | Render Textures
+Sin AA | 1131 | 0.88 | 0.268 | 128.0 | 7
+MSAA 2x | 982 | 1.02 | 0.324 | 142.1 | 7
+MSAA 4x | 1058 | 0.95 | 0.345 | 163.2 | 7
+FXAA | 791 | 1.26 | 0.471 | 137.5 | 22
+TAA | 656 | 1.52 | 0.643 | 148.1 | 24

@@ -1,0 +1,24 @@
+GPU: NVIDIA GeForce RTX 3060 Laptop GPU | API: Direct3D12 | CPU: 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
+RP: Mobile_RPAsset | LOD Bias: 1 | Resolución: 1600x900
+
+[ANTI-ALIASING] vista Nivel del agua, 1600x900 (mediana de 80 frames tras calentamiento)
+sin_aa: render+sync mediana 2.89 ms (min 2.29), framebuffer estimado 11.0 MB
+msaa_2x: render+sync mediana 3.18 ms (min 2.53), framebuffer estimado 22.0 MB
+msaa_4x: render+sync mediana 3.08 ms (min 2.43), framebuffer estimado 43.9 MB
+fxaa: render+sync mediana 3.67 ms (min 3.01), framebuffer estimado 11.0 MB
+taa: render+sync mediana 4.00 ms (min 3.48), framebuffer estimado 27.5 MB
+
+[LOD] objeto roca_00 size=2.67 escala=0.74
+LOD0: transición 32.5% | roca_LOD0 | tris 9826 | verts 7380
+LOD1: transición 12.5% | roca_LOD1 | tris 4420 | verts 3751
+LOD2: transición 1.0% | roca_LOD2 | tris 2456 | verts 2286
+Distancia 3.5 m (altura en pantalla 60.0%): LOD activo = LOD0
+Distancia 9.7 m (altura en pantalla 22.0%): LOD activo = LOD1
+Distancia 35.4 m (altura en pantalla 6.0%): LOD activo = LOD2
+Distancia 354.1 m (altura en pantalla 0.6%): LOD activo = Culled
+
+[METRICAS:optimizado] SRPBatcher=True MSAA=4x contaminación=100%
+Vista | ms (render+sync) | FPS equiv. | CPU ms | Batches | SetPass | StaticBatches/Instanced | Tris | Verts | ShadowCasters | RAM total MB | Gfx driver MB
+Alejada (panorámica) | 4.17 | 240 | 1.83 | 0 | 0 | 0/0 | 0 | 0 | 0 | 776 | 246
+Acercándose (transición) | 3.54 | 283 | 1.63 | 0 | 0 | 0/0 | 0 | 0 | 0 | 777 | 249
+Acercada (primer plano) | 3.50 | 286 | 1.56 | 0 | 0 | 0/0 | 0 | 0 | 0 | 777 | 252

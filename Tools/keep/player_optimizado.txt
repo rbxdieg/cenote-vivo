@@ -1,0 +1,7 @@
+Dispositivo: Alienware m15 R6 (Alienware) | GPU: NVIDIA GeForce RTX 3060 Laptop GPU | API: Direct3D12 | CPU: 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
+Escenario: OPTIMIZADO (LOD Group + SRP Batcher + static batching)
+Resolucion: 1600x900 | Calidad: Mobile | MSAA: 4x | LOD Bias: 1
+Vista | FPS | Frame ms | CPU main ms | GPU ms | Batches | SetPass | Desglose draw calls | Triangulos | Vertices | RAM usada MB | Gfx MB
+Alejada (panoramica) | 898 | 1.11 | 1.16 | 0.36 | 109 | 19 | std 14 / srp 87 (inst 87) / static batches 4 | 39411 | 40564 | 320 | 163
+Acercandose (transicion) | 1108 | 0.90 | 0.98 | 0.32 | 48 | 18 | std 10 / srp 34 (inst 34) / static batches 4 | 51887 | 47184 | 320 | 163
+Acercada (primer plano) | 1162 | 0.86 | 0.90 | 0.27 | 23 | 12 | std 9 / srp 11 (inst 11) / static batches 1 | 41793 | 34308 | 320 | 163
